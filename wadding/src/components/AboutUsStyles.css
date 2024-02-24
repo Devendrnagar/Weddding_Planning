@@ -1,0 +1,42 @@
+/* Style your components */
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Protest+Revolution&family=Protest+Riot&display=swap');
+
+.about-container{
+margin: 4rem 6rem;
+text-align: start;
+
+}
+.about-container h1{
+    padding-bottom: 1rem;
+}
+.about-container p{
+    padding-bottom: 2rem;
+}
+.h1{
+    /* border: 2px solid red; */
+    margin-top: 80px;
+    padding-top: 60px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Protest Revolution', sans-serif;
+    font-family: 'Protest Riot', sans-serif;
+}
+@media screen and (max-width:850px) {
+    .about-container{
+        margin: 4rem 2rem;
+    }
+    
+}
+.mt-0{
+    font-size: 40px;
+    /* margin-top: 120px; */
+    padding-top: 100px;
+    /* border: 2px solid red; */
+
+}
+.card text-center{
+    border: none;
+    outline: none;
+}
