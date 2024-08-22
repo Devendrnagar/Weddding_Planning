@@ -49,7 +49,7 @@ app.post('/login', (req, res)=>{
     })
 })
 
-app.listen(3001, () => {
+app.listen(3002, () => {
     console.log("Server listining on http://127.0.0.1:3001");
 
 });

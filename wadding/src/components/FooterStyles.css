@@ -1,8 +1,8 @@
 /* Style your components */
 .footer{
     padding: 4rem 6rem;
-    background: #000;
-    color: #fff;
+    background:#000;
+    color:#fff;
 }
 
 .top{
@@ -13,13 +13,13 @@
     flex-wrap: wrap;
 }
 .top i{
-    color: #fff;
+    color:#fff;
     font-size: 2rem;
     margin-left: 1rem;
 
 }
 .top i:hover{
-    color: #01959a;
+    color:#01959a;
 }
 .bottom{
     padding-top: 2rem;
@@ -39,12 +39,12 @@
 }
 .bottom a{
     text-decoration: none;
-    color: #fff;
+    color:#fff;
     padding-bottom: .4rem;
     font-size: 1.1rem;
 }
 .container{
-    /* border: 1px solid white; */
+   /* #* border: 1px solid white; */ 
     margin-top:40px;
 }
 @media screen and (max-width:850px) {

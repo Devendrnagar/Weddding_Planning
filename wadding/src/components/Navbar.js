@@ -7,47 +7,39 @@ class Navbar extends Component {
   state = {
     clicked: false,
   };
+
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
+
   render() {
     return (
       <>
-        
+        <nav className="NavbarItems">
+          {/* <h1 className="navbar-logo">Happy</h1> */}
 
-        {/* -------02--------- */}
+          <div className="menu-icons" onClick={this.handleClick}>
+            <i className={this.state.clicked ? "bi bi-x" : "bi bi-three-dots"}></i>
+          </div>
 
-         <nav className="NavbarItems">
-          
-      
-        <h1 className="navbar-logo">Happy</h1>
-
-        <div className="menu-icons " onClick={this.handleClick}>
-          <i className={this.state.clicked ? "bi bi-three-dots":"bi bi-x"}></i>
-        
-        </div>
-
-          <ul className={this.state.clicked ? "nav-menu active":"nav-menu"}>
-
-            {MenuItems.map((item,index)=>{
-            return(
+          <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+            {MenuItems.map((item, index) => (
               <li key={index}>
-
-              <Link className={item.cName} to={item.url}>
-                <i className={item.icon}></i>
-                {item.title}
+                <Link className={item.cName} to={item.url}>
+                  <i className={item.icon}></i>
+                  {item.title}
                 </Link>
-                {/* <Link to='/wadding'></Link> */}
-
               </li>
-
-            )
-
-             } )}
-          {/* <butt>Sign Up</butt on> */}
-           <Link className="button" to='/sing'>Sign Up</Link> 
-         </ul>
-      </nav> 
+            ))}
+{/*             
+            <li>
+              <Link className="nav-links-mobile" to="/sign-up">
+                Sign Up
+              </Link>
+            </li> */}
+          </ul>
+          
+        </nav>
       </>
     );
   }

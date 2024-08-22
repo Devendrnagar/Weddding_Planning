@@ -1,4 +1,4 @@
-#box1{
+box1{
     margin-top: 160px;
     margin-bottom: 40px;
     /* border: 2px solid red; */
@@ -7,7 +7,7 @@
 span{
     color: aqua;
 }
-#text{
+text{
     font-size:50px;
     font-weight: 800;
     animation: text 4s linear;

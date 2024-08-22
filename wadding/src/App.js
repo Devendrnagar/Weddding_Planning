@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import './App.css';
-// import Navbar from './components/Navbar'
+// import './App.css';
+// import Cart from './components/Cart'
+import Navbar from './components/Navbar'
 import Home from './routes/Home'
 import About from './routes/About'
 import Service from './routes/Service'
@@ -12,19 +13,19 @@ import Login from "./Login/Login";
 function App() {
   return (
     <div className="App">
-      
+      {/* <Cart/> */}
     <Routes>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
          <Route path="/about" element={<About/>}/>
         <Route path="/service" element={<Service/>}/>
         <Route path="/contact" element={<Contact/>}/> 
         <Route path="/wadding"element={<Wadding/>}/>
         <Route path="/sing"element={<Singup/>}/>
-        <Route path="/"element={<Register/>}/>
+         <Route path="/"element={<Register/>}/>
         <Route path="/register"element={<Register/>}/>
         <Route path="/login"element={<Login/>}/>
-      </Routes> 
-      {/* <Navbar/> */}
+      </Routes>  
+       <Navbar/> 
 
        
       

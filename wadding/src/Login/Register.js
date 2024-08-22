@@ -5,16 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [name, setName] = useState();
-  const [last, SetLast] = useState();
+  const [username, SetLast] = useState();
   const [email, setEmail] = useState();
   const [password, SetPassword] = useState();
+  const [password_confirmation, setPassword_confirmation] = useState();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3002/register", { name, last, email, password })
+      .post("http://localhost:3002/register", { name, username, email, password, password_confirmation })
       .then((result) => {
         console.log(result);
         if (result.data === "Already registered") {
@@ -34,7 +35,7 @@ export default function Register() {
         className="d-flex justify-content-center align-items-center text-center vh-100"
         style={{
           backgroundImage:
-            "linear-gradient(#00d5ff,#0095ff,rgba(93,0,255,.555))",
+            "linear-gradient(/00d5ff,/0095ff,rgba(93,0,255,.555))",
         }}
       >
         <div className="bg-white p-3 rounded" style={{ width: "40%" }}>
@@ -58,11 +59,11 @@ export default function Register() {
 
             <div className="mb-3 text-start">
               <label className="form-label">
-                <strong>LastName</strong>
+                <strong>UserName</strong>
               </label>
               <input
                 type="text"
-                placeholder="Enter lastName"
+                placeholder="Enter UserName"
                 className="form-control"
                 id="exampleInputname"
                 onChange={(e) => SetLast(e.target.value)}
@@ -96,6 +97,22 @@ export default function Register() {
                 required
               />
             </div>
+
+            {/* new */}
+            <div className="mb-3 text-start">
+              <label className="form-label">
+                <strong>password_confirmation</strong>
+              </label>
+              <input
+                type="password"
+                placeholder="Enter password"
+                className="form-control"
+                id="exampleInputname"
+                onChange={(e) => setPassword_confirmation(e.target.value)}
+                required
+              />
+            </div>
+            {/* end  */}
 
             <button type="submit" className="btn btn-primary">
               Register
